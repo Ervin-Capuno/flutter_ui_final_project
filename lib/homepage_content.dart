@@ -57,8 +57,8 @@ class _HomePageContentState extends State<HomePageContent> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
             'Featured Rooms',
             style: TextStyle(
@@ -67,7 +67,7 @@ class _HomePageContentState extends State<HomePageContent> {
             ),
           ),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         SizedBox(
           height: 250,
           child: ListView.builder(
@@ -109,9 +109,9 @@ class _HomePageContentState extends State<HomePageContent> {
                         left: 0,
                         right: 0,
                         child: Container(
-                          padding: EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(8.0),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(8.0),
                               bottomRight: Radius.circular(8.0),
                             ),
@@ -126,7 +126,7 @@ class _HomePageContentState extends State<HomePageContent> {
                           ),
                           child: Text(
                             rooms[index].name,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -141,27 +141,27 @@ class _HomePageContentState extends State<HomePageContent> {
             },
           ),
         ),
-        SizedBox(height: 16.0),
+        const SizedBox(height: 16.0),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: _selectedRoom != null
               ? Text(
                   "${_selectedRoom!.name}'s Devices",
-                  style: TextStyle(fontSize: 24.0),
+                  style: const TextStyle(fontSize: 24.0),
                 )
-              : Text(
+              : const Text(
                   "Room's Devices",
                   style: TextStyle(fontSize: 24.0),
                 ),
         ),
-        SizedBox(height: 20.0),
+        const SizedBox(height: 20.0),
         Expanded(
           child: _selectedRoom != null
               ? ListView.separated(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   itemCount: _selectedRoom!.devices.length,
                   separatorBuilder: (BuildContext context, int index) =>
-                      SizedBox(height: 8.0),
+                      const SizedBox(height: 8.0),
                   itemBuilder: (BuildContext context, int index) {
                     final device = _selectedRoom!.devices[index];
                     return GestureDetector(
@@ -180,7 +180,7 @@ class _HomePageContentState extends State<HomePageContent> {
                     );
                   },
                 )
-              : Center(
+              : const Center(
                   child: Text(
                     'Select a room to view devices',
                     style: TextStyle(fontSize: 18.0),
@@ -205,14 +205,13 @@ class _HomePageContentState extends State<HomePageContent> {
   }
 
   void _showDeviceBottomSheet(Devices device) async {
-    final result = await showModalBottomSheet(
+    await showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DeviceBottomSheet(
           device: device,
           updateDeviceState: (newDevice) {
             setState(() {
-              // Find the corresponding room and update the device
               for (int i = 0; i < rooms.length; i++) {
                 if (rooms[i].devices.contains(device)) {
                   final index = rooms[i].devices.indexOf(device);
@@ -220,16 +219,10 @@ class _HomePageContentState extends State<HomePageContent> {
                 }
               }
             });
-            Navigator.pop(
-                context, true); // Close the bottom sheet after state update
+            Navigator.pop(context, true);
           },
         );
       },
     );
-
-    // Handle any result if needed
-    if (result != null && result) {
-      // Handle the result if necessary
-    }
   }
 }
