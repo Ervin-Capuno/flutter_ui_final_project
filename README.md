@@ -32,11 +32,6 @@ flutter pub run
 ``` 
 It is used to run the flutter package
 
-## UI
-
-## To Beginners wants to create this project
-
-
 ## Conrtibutors
 - [Bien Joshua Macuha]()
 - [Ervin Rey Capuno](https://github.com/Ervin-Capuno)
