@@ -16,7 +16,7 @@ class DeviceBottomSheet extends StatefulWidget {
 }
 
 class _DeviceBottomSheetState extends State<DeviceBottomSheet> {
-  late bool _isOn; // Track the state of the device
+  late bool _isOn;
 
   @override
   void initState() {
@@ -26,7 +26,8 @@ class _DeviceBottomSheetState extends State<DeviceBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Material(
+      borderRadius: BorderRadius.circular(12),
       color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -36,25 +37,22 @@ class _DeviceBottomSheetState extends State<DeviceBottomSheet> {
           children: [
             Text(
               widget.device.name,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 12.0),
+            const SizedBox(height: 12.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Device State'),
+                const Text('Device State'),
                 Switch(
                   value: _isOn,
                   onChanged: (newValue) {
                     setState(() {
                       _isOn = newValue;
-                      // Perform the action to update the device state here
-                      // For example, you might want to update the device state in the model.
                       widget.device.state = _isOn ? 'On' : 'Off';
-                      // Call the callback to update the device state in the parent widget
                       widget.updateDeviceState(widget.device);
                     });
                   },
