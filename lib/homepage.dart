@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'homepage_content.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: HomePageContent(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => (),
+        onPressed: () {},
         child: Icon(Icons.add),
       ),
     );
