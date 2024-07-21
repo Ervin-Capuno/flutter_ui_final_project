@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SmartHome'),
+        title: const Text('CozyControl'),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 16.0),

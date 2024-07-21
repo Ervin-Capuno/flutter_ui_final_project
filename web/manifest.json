@@ -1,6 +1,6 @@
 {
-     "name": "SmartHome",
-     "short_name": "SmartHome",
+     "name": "CozyControl",
+     "short_name": "CozyControl",
      "start_url": ".",
      "display": "standalone",
      "background_color": "#hexcode",
