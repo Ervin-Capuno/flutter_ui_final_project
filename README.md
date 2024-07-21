@@ -17,7 +17,8 @@ Ensure you have the following installed:
 ##### [To search the packages that used in this project](https://pub.dev/)
 - flutter_arc_speed_dial: (version 2.0.1) used to create the arc speed dial.
 - flutter_launcher_icons (version 0.13.1): Used to change the app icon.
-- rename_app (version1.6.1): Used to change the app's name.
+- rename_app (version 1.6.1): Used to change the app's name.
+- skeleton_text: (verion 3.0.1): Used to create a skeleton UI.
 
 ## Getting Started
 1. To download this Flutter project, use the following command in your terminal:
