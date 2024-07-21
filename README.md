@@ -1,4 +1,4 @@
-# CozyControl
+# SmartHome
 
 SmartHome is a sample UI android application created using Flutter and Dart. It allows users to remotely control their home appliances. This project serves as the final project for Application Development.
 
@@ -37,4 +37,4 @@ It is used to run the flutter package
 - [Bien Joshua Macuha]()
 - [Ervin Rey Capuno](https://github.com/Ervin-Capuno)
 - [Karl Phillip Caringal]()
-- [Nico Angelo Burog]()
+- [Nico Angelo Burog](https://github.com/NicoAngeloBurog)
