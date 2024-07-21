@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'room_page.dart';
 import 'data/dummy_data.dart';
 import 'models/devices_model.dart';
 import 'models/room_model.dart';
@@ -113,11 +112,12 @@ class _HomePageContentState extends State<HomePageContent> {
           child: _selectedRoom != null
               ? Text(
                   "${_selectedRoom!.name}'s Devices",
-                  style: const TextStyle(fontSize: 24.0),
+                  style: const TextStyle(
+                      fontSize: 19.0, fontWeight: FontWeight.bold),
                 )
               : const Text(
                   "Room's Devices",
-                  style: TextStyle(fontSize: 24.0),
+                  style: TextStyle(fontSize: 19.0, fontWeight: FontWeight.bold),
                 ),
         ),
         const SizedBox(height: 20.0),
@@ -147,9 +147,12 @@ class _HomePageContentState extends State<HomePageContent> {
                   },
                 )
               : const Center(
-                  child: Text(
-                    'Select a room to view devices',
-                    style: TextStyle(fontSize: 18.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      'One Tap a room to view devices or Double Tap the room to see the Room Info',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
                   ),
                 ),
         ),

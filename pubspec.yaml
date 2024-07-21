@@ -43,10 +43,10 @@ flutter:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "img/playstore.png"  # Update this path according to your actual image path
+  image_path: "img/playstore.png"
   min_sdk_android: 21
   web:
     generate: true
-    image_path: "img/playstore.png"  # Update this path according to your actual image path
+    image_path: "img/playstore.png"
     background_color: "#hexcode"
     theme_color: "#hexcode"

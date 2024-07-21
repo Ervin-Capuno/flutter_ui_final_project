@@ -14,7 +14,7 @@ class BottomSheetManager {
             return Center(
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.5,
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -24,7 +24,7 @@ class BottomSheetManager {
                       style: const TextStyle(
                           fontSize: 24.0, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 16.0),
+                    const SizedBox(height: 10.0),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -93,8 +93,7 @@ class BottomSheetManager {
                                 if (newValue != null) {
                                   setState(() {
                                     dropdownValue = newValue;
-                                    room.control =
-                                        newValue; // Update room's control mode
+                                    room.control = newValue;
                                   });
                                 }
                               },
