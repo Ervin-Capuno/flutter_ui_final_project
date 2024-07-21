@@ -30,7 +30,7 @@ class RoomCard extends StatelessWidget {
         child: Center(
           child: Text(
             name,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 24,
               fontWeight: FontWeight.bold,

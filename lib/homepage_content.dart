@@ -5,6 +5,7 @@ import 'models/devices_model.dart';
 import 'models/room_model.dart';
 import 'common_widgets/bottom_sheet.dart';
 import 'common_widgets/room_widgets.dart';
+import 'common_widgets/bottom_sheet_class.dart';
 import 'common_widgets/devices_widgets.dart';
 
 class HomePageContent extends StatefulWidget {
@@ -46,7 +47,7 @@ class _HomePageContentState extends State<HomePageContent> {
                   });
                 },
                 onDoubleTap: () {
-                  _navigateToRoomPage(rooms[index]);
+                  _showRoomDetailsBottomSheet(rooms[index]);
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -156,17 +157,8 @@ class _HomePageContentState extends State<HomePageContent> {
     );
   }
 
-  void _navigateToRoomPage(Room room) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => RoomPage(
-          temperature: room.temperature,
-          lightLevel: room.lightLevel,
-          backgroundImage: room.backgroundImage,
-        ),
-      ),
-    );
+  void _showRoomDetailsBottomSheet(Room room) {
+    BottomSheetManager.showRoomDetailsBottomSheet(context, room);
   }
 
   void _showDeviceBottomSheet(Devices device) async {

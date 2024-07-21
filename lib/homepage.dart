@@ -62,9 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
         isMainFABMini: false,
         mainMenuFloatingActionButton: MainMenuFloatingActionButton(
           mini: false,
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: () {},
-          closeMenuChild: Icon(Icons.close),
+          closeMenuChild: const Icon(Icons.close),
           closeMenuForegroundColor: Colors.white,
           closeMenuBackgroundColor: Colors.red,
         ),

@@ -6,6 +6,7 @@ class Room {
   final double temperature;
   final double lightLevel;
   final List<Devices> devices;
+  String control;
 
   Room({
     required this.name,
@@ -13,5 +14,6 @@ class Room {
     required this.temperature,
     required this.lightLevel,
     required this.devices,
+    required this.control,
   });
 }

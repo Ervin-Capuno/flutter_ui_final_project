@@ -7,6 +7,7 @@ List<Room> rooms = [
     backgroundImage: 'img/living_room.jpg',
     temperature: 31.0,
     lightLevel: 89.1,
+    control: 'Automatic',
     devices: [
       Devices(
         name: 'TV',
@@ -27,6 +28,7 @@ List<Room> rooms = [
     backgroundImage: 'img/kitchen.jpg',
     temperature: 27.0,
     lightLevel: 87.1,
+    control: 'Manual',
     devices: [
       Devices(
         name: 'Electric Stove',
