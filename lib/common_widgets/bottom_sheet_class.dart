@@ -9,126 +9,138 @@ class BottomSheetManager {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Center(
-          child: Container(
-            width: MediaQuery.of(context).size.width * 0.5,
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  room.name,
-                  style: const TextStyle(
-                      fontSize: 24.0, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 16.0),
-                Row(
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.5,
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Icon(Icons.thermostat_rounded, color: Colors.orange),
-                    const SizedBox(width: 8.0),
-                    Column(
+                    Text(
+                      room.name,
+                      style: const TextStyle(
+                          fontSize: 24.0, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 16.0),
+                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Temperature',
-                          style: TextStyle(
-                              fontSize: 18.0, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 4.0),
-                        Text(
-                          '${room.temperature} °C',
-                          style: const TextStyle(fontSize: 16.0),
+                        const Icon(Icons.thermostat_rounded,
+                            color: Colors.orange),
+                        const SizedBox(width: 8.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Temperature',
+                              style: TextStyle(
+                                  fontSize: 18.0, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(height: 4.0),
+                            Text(
+                              '${room.temperature} °C',
+                              style: const TextStyle(fontSize: 16.0),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
-                const SizedBox(height: 12.0),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(Icons.lightbulb_rounded, color: Colors.yellow),
-                    const SizedBox(width: 8.0),
-                    Column(
+                    const SizedBox(height: 12.0),
+                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Light Level',
-                          style: TextStyle(
-                              fontSize: 18.0, fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 4.0),
-                        Text(
-                          '${room.lightLevel} lux',
-                          style: const TextStyle(fontSize: 16.0),
+                        const Icon(Icons.lightbulb_rounded,
+                            color: Colors.yellow),
+                        const SizedBox(width: 8.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Light Level',
+                              style: TextStyle(
+                                  fontSize: 18.0, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(height: 4.0),
+                            Text(
+                              '${room.lightLevel} lux',
+                              style: const TextStyle(fontSize: 16.0),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
-                const SizedBox(height: 16.0),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(Icons.settings, color: Colors.blue),
-                    const SizedBox(width: 8.0),
-                    Column(
+                    const SizedBox(height: 16.0),
+                    Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          'Control Mode',
-                          style: TextStyle(
-                              fontSize: 18.0, fontWeight: FontWeight.bold),
+                        const Icon(Icons.settings, color: Colors.blue),
+                        const SizedBox(width: 8.0),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Control Mode',
+                              style: TextStyle(
+                                  fontSize: 18.0, fontWeight: FontWeight.bold),
+                            ),
+                            const SizedBox(height: 8.0),
+                            DropdownButton<String>(
+                              value: dropdownValue,
+                              onChanged: (String? newValue) {
+                                if (newValue != null) {
+                                  setState(() {
+                                    dropdownValue = newValue;
+                                    room.control =
+                                        newValue; // Update room's control mode
+                                  });
+                                }
+                              },
+                              items: <String>[
+                                'Automatic',
+                                'Manual'
+                              ].map<DropdownMenuItem<String>>((String value) {
+                                return DropdownMenuItem<String>(
+                                  value: value,
+                                  child: Text(value),
+                                );
+                              }).toList(),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 8.0),
-                        DropdownButton<String>(
-                          value: dropdownValue,
-                          onChanged: (String? newValue) {
-                            if (newValue != null) {
-                              room.control = newValue;
+                      ],
+                    ),
+                    const SizedBox(height: 16.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            String message = '';
+                            if (room.control == 'Automatic') {
+                              message = 'Control mode set to Automatic';
+                            } else {
+                              message = 'Control mode set to Manual';
                             }
-                          },
-                          items: <String>['Automatic', 'Manual']
-                              .map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(message),
+                                duration: const Duration(seconds: 2),
+                              ),
                             );
-                          }).toList(),
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Save'),
                         ),
                       ],
                     ),
                   ],
                 ),
-                const SizedBox(height: 16.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        String message = '';
-                        if (room.control == 'Automatic') {
-                          message = 'Control mode set to Automatic';
-                        } else {
-                          message = 'Control mode set to Manual';
-                        }
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(message),
-                            duration: const Duration(seconds: 2),
-                          ),
-                        );
-                        Navigator.pop(context);
-                      },
-                      child: const Text('Save'),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+              ),
+            );
+          },
         );
       },
     );
