@@ -1,26 +1,31 @@
 import 'package:flutter/material.dart';
+import 'common_widgets/bottom_sheet_class.dart';
+import 'package:flutter_arc_speed_dial/flutter_speed_dial_menu_button.dart';
+import 'package:flutter_arc_speed_dial/main_menu_floating_action_button.dart';
 import 'homepage_content.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool _isShowDial = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('smartUI'),
+        title: const Text('SmartHome'),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 16.0),
             child: CircleAvatar(
               backgroundImage: AssetImage('img/Killua.jpg'),
             ),
-          )
+          ),
         ],
       ),
       drawer: SafeArea(
@@ -46,10 +51,49 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: HomePageContent(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
+      body: const HomePageContent(),
+      floatingActionButton: SpeedDialMenuButton(
+        isShowSpeedDial: _isShowDial,
+        updateSpeedDialStatus: (isShow) {
+          setState(() {
+            _isShowDial = isShow;
+          });
+        },
+        isMainFABMini: false,
+        mainMenuFloatingActionButton: MainMenuFloatingActionButton(
+          mini: false,
+          child: Icon(Icons.add),
+          onPressed: () {},
+          closeMenuChild: Icon(Icons.close),
+          closeMenuForegroundColor: Colors.white,
+          closeMenuBackgroundColor: Colors.red,
+        ),
+        floatingActionButtonWidgetChildren: <FloatingActionButton>[
+          FloatingActionButton(
+            mini: true,
+            child: Icon(Icons.lightbulb),
+            onPressed: () {
+              _isShowDial = false;
+              setState(() {
+                BottomSheetManager.showAddDeviceBottomSheet(context);
+              });
+            },
+            backgroundColor: Colors.green,
+          ),
+          FloatingActionButton(
+            mini: true,
+            child: Icon(Icons.room),
+            onPressed: () {
+              _isShowDial = false;
+              setState(() {
+                BottomSheetManager.showAddRoomBottomSheet(context);
+              });
+            },
+            backgroundColor: Colors.orange,
+          ),
+        ],
+        isSpeedDialFABsMini: true,
+        paddingBtwSpeedDialButton: 50.0,
       ),
     );
   }

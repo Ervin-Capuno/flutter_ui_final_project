@@ -12,8 +12,6 @@ class Room {
     required this.backgroundImage,
     required this.temperature,
     required this.lightLevel,
-    required this.devices, // Include devices in the constructor
+    required this.devices,
   });
-
-  // Optionally, you can define methods to work with devices
 }
