@@ -11,13 +11,13 @@ List<Room> rooms = [
     devices: [
       Devices(
         name: 'TV',
-        image: '',
+        image: 'img/tv.png',
         state: 'On',
         consumption: '150 kWh',
       ),
       Devices(
         name: 'Lamp',
-        image: '',
+        image: 'img/lamp.jpg',
         state: 'Off',
         consumption: '20 kWh',
       ),
@@ -32,7 +32,7 @@ List<Room> rooms = [
     devices: [
       Devices(
         name: 'Electric Stove',
-        image: '',
+        image: 'img/electric_stove.jpg',
         state: 'Off',
         consumption: '31 kWh',
       ),
