@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../data/dummy_data.dart';
+import '../models/room_model.dart';
 
 class BottomSheetManager {
   static void showAddDeviceBottomSheet(BuildContext context) {
@@ -15,6 +17,18 @@ class BottomSheetManager {
             ),
             TextFormField(
               decoration: InputDecoration(labelText: 'Device Background Image'),
+            ),
+            DropdownButtonFormField<String>(
+              decoration: InputDecoration(labelText: 'Room name'),
+              items: rooms.map((Room room) {
+                return DropdownMenuItem<String>(
+                  value: room.name,
+                  child: Text(room.name),
+                );
+              }).toList(),
+              onChanged: (String? value) {
+                // Handle onChanged event if needed
+              },
             ),
           ],
         );
@@ -63,7 +77,6 @@ class BottomSheetManager {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Handle form submission
                 Navigator.pop(context);
               },
               child: Text('Submit'),

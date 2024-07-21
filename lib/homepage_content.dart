@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'room_page.dart';
-import 'models/room_model.dart';
-import 'common_widgets/devices_widgets.dart';
-import 'common_widgets/bottom_sheet.dart';
+import 'data/dummy_data.dart';
 import 'models/devices_model.dart';
+import 'models/room_model.dart';
+import 'common_widgets/bottom_sheet.dart';
+import 'common_widgets/room_widgets.dart';
+import 'common_widgets/devices_widgets.dart';
 
 class HomePageContent extends StatefulWidget {
   const HomePageContent({Key? key}) : super(key: key);
@@ -13,44 +15,7 @@ class HomePageContent extends StatefulWidget {
 }
 
 class _HomePageContentState extends State<HomePageContent> {
-  Room? _selectedRoom; // Track the selected room
-
-  List<Room> rooms = [
-    Room(
-      name: 'Living Room',
-      backgroundImage: 'img/living_room.jpg',
-      temperature: 31.0,
-      lightLevel: 89.1,
-      devices: [
-        Devices(
-          name: 'TV',
-          image: 'img/tv.jpg',
-          state: 'On',
-          consumption: '150W',
-        ),
-        Devices(
-          name: 'Lamp',
-          image: 'img/lamp.jpg',
-          state: 'Off',
-          consumption: '20W',
-        ),
-      ],
-    ),
-    Room(
-      name: 'Kitchen',
-      backgroundImage: 'img/kitchen.jpg',
-      temperature: 27.0,
-      lightLevel: 87.1,
-      devices: [
-        Devices(
-          name: 'Electric Stove',
-          image: '',
-          state: '',
-          consumption: '',
-        ),
-      ],
-    ),
-  ];
+  Room? _selectedRoom;
 
   @override
   Widget build(BuildContext context) {
