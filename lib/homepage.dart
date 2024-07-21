@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'common_widgets/bottom_sheet_class.dart';
+import 'common_widgets/skeleton.dart';
 import 'package:flutter_arc_speed_dial/flutter_speed_dial_menu_button.dart';
 import 'package:flutter_arc_speed_dial/main_menu_floating_action_button.dart';
 import 'homepage_content.dart';
@@ -13,6 +14,20 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool _isShowDial = false;
+  bool _isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _simulateLoading();
+  }
+
+  Future<void> _simulateLoading() async {
+    await Future.delayed(const Duration(seconds: 9));
+    setState(() {
+      _isLoading = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: const HomePageContent(),
+      body: SkeletonLoader(
+        isLoading: _isLoading,
+        child: HomePageContent(),
+      ),
       floatingActionButton: SpeedDialMenuButton(
         isShowSpeedDial: _isShowDial,
         updateSpeedDialStatus: (isShow) {
