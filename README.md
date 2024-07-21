@@ -37,4 +37,4 @@ It is used to run the flutter package
 - [Bien Joshua Macuha]()
 - [Ervin Rey Capuno](https://github.com/Ervin-Capuno)
 - [Karl Phillip Caringal]()
-- [Nico Angelo Burog]()
+- [Nico Angelo Burog](https://github.com/NicoAngeloBurog)
