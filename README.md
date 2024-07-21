@@ -36,5 +36,5 @@ It is used to run the flutter
 ## Conrtibutors
 - [Bien Joshua Macuha]()
 - [Ervin Rey Capuno](https://github.com/Ervin-Capuno)
-- [Karl Phillip Caringal]()
+- [Karl Phillip Caringal](https://github.com/caringalkarl)
 - [Nico Angelo Burog](https://github.com/NicoAngeloBurog)
