@@ -4,6 +4,8 @@ CozyControl is a sample UI android application created using Flutter and Dart. I
 
 Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Angelo Burog
 
+YouTube Link: https://youtu.be/iyiVLka8Ti8
+
 ## Environement Configurations
 Ensure you have the following installed:
 - Flutter SDK (version 3.19.6)
