@@ -29,9 +29,9 @@ flutter pub get
 This command is used to fetch and install all the package dependencies required for the Flutter project. It initializes the project by ensuring all necessary packages are downloaded and ready to use.
 3. Now open the android emulator and type this command.
 ```bash
-flutter pub run
+flutter run
 ``` 
-It is used to run the flutter package
+It is used to run the flutter 
 
 ## Conrtibutors
 - [Bien Joshua Macuha]()
