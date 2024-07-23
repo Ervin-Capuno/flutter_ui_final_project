@@ -46,7 +46,10 @@ class _DeviceBottomSheetState extends State<DeviceBottomSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Device State'),
+                const Text(
+                  'Device State',
+                  style: TextStyle(fontSize: 20.0),
+                ),
                 Switch(
                   value: _isOn,
                   onChanged: (newValue) {
