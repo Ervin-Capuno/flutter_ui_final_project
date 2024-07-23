@@ -3,7 +3,8 @@ import 'common_widgets/bottom_sheet_class.dart';
 import 'common_widgets/skeleton.dart';
 import 'package:flutter_arc_speed_dial/flutter_speed_dial_menu_button.dart';
 import 'package:flutter_arc_speed_dial/main_menu_floating_action_button.dart';
-import 'homepage_content.dart';
+import 'pages/homepage_content.dart';
+import 'pages/settings_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -47,18 +48,24 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Drawer(
           child: ListView(
             padding: EdgeInsets.zero,
-            children: const [
-              DrawerHeader(
+            children: [
+              const DrawerHeader(
                 decoration: BoxDecoration(
                   color: Colors.blue,
                 ),
                 child: Text('Smart UI'),
               ),
               ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('Settings'),
+                leading: const Icon(Icons.settings),
+                title: const Text('Settings'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()),
+                  );
+                },
               ),
-              ListTile(
+              const ListTile(
                 leading: Icon(Icons.logout),
                 title: Text('Logout'),
               ),
@@ -68,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SkeletonLoader(
         isLoading: _isLoading,
-        child: HomePageContent(),
+        child: const HomePageContent(),
       ),
       floatingActionButton: SpeedDialMenuButton(
         isShowSpeedDial: _isShowDial,
@@ -88,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         floatingActionButtonWidgetChildren: <FloatingActionButton>[
           FloatingActionButton(
+            heroTag: 'lightbulbTag',
             mini: true,
             child: Icon(Icons.lightbulb),
             onPressed: () {
@@ -99,6 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             backgroundColor: Colors.green,
           ),
           FloatingActionButton(
+            heroTag: 'roomTag',
             mini: true,
             child: Icon(Icons.room),
             onPressed: () {
