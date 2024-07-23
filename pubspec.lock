@@ -103,7 +103,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_arc_speed_dial:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_arc_speed_dial
       sha256: "9fdf01ec4fef31dbfe815e25eb1feea7e8e9fbc689a8c80234f9302866eb105b"
@@ -111,7 +111,7 @@ packages:
     source: hosted
     version: "2.0.1"
   flutter_launcher_icons:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_launcher_icons
       sha256: "526faf84284b86a4cb36d20a5e45147747b7563d921373d4ee0559c54fcdbcea"
@@ -228,7 +228,7 @@ packages:
     source: hosted
     version: "1.6.1"
   skeleton_text:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: skeleton_text
       sha256: bacd536bf0664efe1cae53bcbd78c3d4040a120f300f69dc85d83f358471cc6c

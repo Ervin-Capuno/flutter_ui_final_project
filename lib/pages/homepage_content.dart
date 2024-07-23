@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'data/dummy_data.dart';
-import 'models/devices_model.dart';
-import 'models/room_model.dart';
-import 'common_widgets/bottom_sheet.dart';
+import '../data/dummy_data.dart';
+import '../models/devices_model.dart';
+import '../models/room_model.dart';
+import '../common_widgets/bottom_sheet.dart';
 // import 'common_widgets/room_widgets.dart';
-import 'common_widgets/bottom_sheet_class.dart';
-import 'common_widgets/devices_widgets.dart';
+import '../common_widgets/bottom_sheet_class.dart';
+import '../common_widgets/devices_widgets.dart';
 
 class HomePageContent extends StatefulWidget {
   const HomePageContent({Key? key}) : super(key: key);
