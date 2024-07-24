@@ -10,6 +10,7 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -49,11 +50,34 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              const DrawerHeader(
+              const UserAccountsDrawerHeader(
+                accountName: Text(
+                  'CozyControl',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24.0,
+                  ),
+                ),
+                accountEmail: Text(''),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Text(
+                    'C',
+                    style: TextStyle(
+                      fontSize: 40.0,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
                 decoration: BoxDecoration(
                   color: Colors.blue,
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: NetworkImage(
+                      'https://images.unsplash.com/photo-1503264116251-35a269479413',
+                    ),
+                  ),
                 ),
-                child: Text('Smart UI'),
               ),
               ListTile(
                 leading: const Icon(Icons.settings),
@@ -97,7 +121,6 @@ class _MyHomePageState extends State<MyHomePage> {
           FloatingActionButton(
             heroTag: 'lightbulbTag',
             mini: true,
-            child: Icon(Icons.lightbulb),
             onPressed: () {
               _isShowDial = false;
               setState(() {
@@ -105,11 +128,11 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             backgroundColor: Colors.green,
+            child: const Icon(Icons.lightbulb),
           ),
           FloatingActionButton(
             heroTag: 'roomTag',
             mini: true,
-            child: Icon(Icons.room),
             onPressed: () {
               _isShowDial = false;
               setState(() {
@@ -117,6 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             backgroundColor: Colors.orange,
+            child: const Icon(Icons.room),
           ),
         ],
         isSpeedDialFABsMini: true,

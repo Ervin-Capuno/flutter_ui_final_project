@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/dummy_data.dart';
 import '../models/devices_model.dart';
 import '../models/room_model.dart';
-import '../common_widgets/bottom_sheet.dart';
+import '../common_widgets/device_sheet.dart';
 // import 'common_widgets/room_widgets.dart';
 import '../common_widgets/bottom_sheet_class.dart';
 import '../common_widgets/devices_widgets.dart';
@@ -45,7 +45,7 @@ class _HomePageContentState extends State<HomePageContent> {
                     _selectedRoom = rooms[index];
                   });
                 },
-                onDoubleTap: () {
+                onLongPress: () {
                   _showRoomDetailsBottomSheet(rooms[index]);
                 },
                 child: Padding(
