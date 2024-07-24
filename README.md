@@ -27,6 +27,7 @@ Ensure you have the following installed:
 - flutter_launcher_icons (version 0.13.1): Used to change the app icon.
 - rename_app (version 1.6.1): Used to change the app's name.
 - skeleton_text: (verion 3.0.1): Used to create a skeleton UI.
+- image_picker: (version 0.8.5+3): Used to pick image from the local device.
 
 ## Getting Started
 1. To download this Flutter project, use the following command in your terminal:
