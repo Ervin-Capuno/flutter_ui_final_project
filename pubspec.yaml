@@ -16,6 +16,7 @@ dependencies:
   flutter_arc_speed_dial: ^2.0.1
   flutter_launcher_icons: ^0.13.1
   skeleton_text: ^3.0.1
+  image_picker: ^0.8.5+3
   
 
 dev_dependencies:
