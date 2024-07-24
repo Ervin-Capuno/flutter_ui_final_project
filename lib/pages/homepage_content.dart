@@ -150,7 +150,7 @@ class _HomePageContentState extends State<HomePageContent> {
                   child: Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      'One Tap a room to view devices or Double Tap the room to see the Room Info',
+                      'One Tap a room to view devices or long press a room to see the Room Info',
                       style: TextStyle(fontSize: 18.0),
                     ),
                   ),
