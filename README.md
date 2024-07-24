@@ -4,6 +4,13 @@ CozyControl is a sample UI android application created using Flutter and Dart. I
 
 Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Angelo Burog
 
+## Features
+- By long-pressing a room, the user can view the lux and temperature levels of that room and set the control mode to either automatic or manual.
+- By tapping a room once, the user can see the different devices installed in that room.
+- The user can view the kWh usage and the current state (on or off) of each device by tapping on it, which will bring up a bottom sheet allowing them to turn the device on or off.
+- There is a settings option to connect to the microcontroller via Bluetooth Low Energy (BLE) or WiFi.
+- The user can add a new room or add a device to a specific room.
+
 ## YouTube Link: 
 https://youtu.be/iyiVLka8Ti8
 
