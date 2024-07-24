@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import '../data/dummy_data.dart';
 import '../models/room_model.dart';
+import 'dart:io';
 
 class BottomSheetManager {
   static void showRoomDetailsBottomSheet(BuildContext context, Room room) {
@@ -147,46 +149,73 @@ class BottomSheetManager {
 
   static void showAddDeviceBottomSheet(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
+    final ImagePicker _picker = ImagePicker();
+    XFile? _pickedImage;
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       builder: (BuildContext context) {
-        return _buildBottomSheet(
-          context,
-          title: 'Add Device',
-          formFields: [
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'Device Name'),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter device name';
-                }
-                return null;
-              },
-            ),
-            TextFormField(
-              decoration:
-                  const InputDecoration(labelText: 'Device Background Image'),
-            ),
-            DropdownButtonFormField<String>(
-              decoration: const InputDecoration(labelText: 'Room name'),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please select a room';
-                }
-                return null;
-              },
-              items: rooms.map((Room room) {
-                return DropdownMenuItem<String>(
-                  value: room.name,
-                  child: Text(room.name),
-                );
-              }).toList(),
-              onChanged: (String? value) {},
-            ),
-          ],
-          formKey: _formKey,
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return _buildBottomSheet(
+              context,
+              title: 'Add Device',
+              formFields: [
+                GestureDetector(
+                  onTap: () async {
+                    final XFile? pickedFile =
+                        await _picker.pickImage(source: ImageSource.gallery);
+                    if (pickedFile != null) {
+                      setState(() {
+                        _pickedImage = pickedFile;
+                      });
+                    }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 150,
+                    margin: const EdgeInsets.only(bottom: 20),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: _pickedImage == null
+                        ? const Center(child: Text('Device Background Image'))
+                        : Image.file(
+                            File(_pickedImage!.path),
+                            fit: BoxFit.cover,
+                          ),
+                  ),
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(labelText: 'Device Name'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter device name';
+                    }
+                    return null;
+                  },
+                ),
+                DropdownButtonFormField<String>(
+                  decoration: const InputDecoration(labelText: 'Room name'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please select a room';
+                    }
+                    return null;
+                  },
+                  items: rooms.map((Room room) {
+                    return DropdownMenuItem<String>(
+                      value: room.name,
+                      child: Text(room.name),
+                    );
+                  }).toList(),
+                  onChanged: (String? value) {},
+                ),
+              ],
+              formKey: _formKey,
+            );
+          },
         );
       },
     );
@@ -194,29 +223,57 @@ class BottomSheetManager {
 
   static void showAddRoomBottomSheet(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
+    final ImagePicker _picker = ImagePicker();
+    XFile? _pickedImage;
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       builder: (BuildContext context) {
-        return _buildBottomSheet(
-          context,
-          title: 'Add Room',
-          formFields: [
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'Room Name'),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter room name';
-                }
-                return null;
-              },
-            ),
-            TextFormField(
-              decoration: const InputDecoration(labelText: 'Room Image'),
-            ),
-          ],
-          formKey: _formKey,
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return _buildBottomSheet(
+              context,
+              title: 'Add Room',
+              formFields: [
+                GestureDetector(
+                  onTap: () async {
+                    final XFile? pickedFile =
+                        await _picker.pickImage(source: ImageSource.gallery);
+                    if (pickedFile != null) {
+                      setState(() {
+                        _pickedImage = pickedFile;
+                      });
+                    }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 150,
+                    margin: const EdgeInsets.only(bottom: 20),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: _pickedImage == null
+                        ? const Center(child: Text('Room Image'))
+                        : Image.file(
+                            File(_pickedImage!.path),
+                            fit: BoxFit.cover,
+                          ),
+                  ),
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(labelText: 'Room Name'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter room name';
+                    }
+                    return null;
+                  },
+                ),
+              ],
+              formKey: _formKey,
+            );
+          },
         );
       },
     );
@@ -255,12 +312,12 @@ class BottomSheetManager {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(message),
-                        duration: Duration(seconds: 2),
+                        duration: const Duration(seconds: 2),
                       ),
                     );
                   }
                 },
-                child: const Text('Submit'),
+                child: const Text('Add'),
               ),
             ],
           ),
