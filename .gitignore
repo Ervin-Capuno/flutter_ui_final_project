@@ -41,3 +41,14 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+
+/build
+/.dart_tool
+flutter-plugins
+flutter-plugins-dependencies
+metadata
+pubspec.lock
+analysis-options.yaml
+speed_dial.iml
