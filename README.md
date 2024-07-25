@@ -20,6 +20,7 @@ Ensure you have the following installed:
 - Android Studio JellyFish or above
 - Visual Studio
 - Medium Phone API 24 or any version of Android Emulator
+- Git
 
 ## Third-Party Packages Used
 ##### [To search the packages that used in this project](https://pub.dev/)
@@ -29,21 +30,61 @@ Ensure you have the following installed:
 - skeleton_text: (verion 3.0.1): Used to create a skeleton UI.
 - image_picker: (version 0.8.5+3): Used to pick image from the local device.
 
-## Getting Started
-1. To download this Flutter project, use the following command in your terminal:
+Markdown
+## Getting Started with Your Flutter Project
+
+This guide walks you through setting up and running your downloaded Flutter project.
+
+**1. Download the Project**
+
+Open your terminal and navigate to the desired directory where you want to clone the project. Then, use the following command to clone the project from GitHub:
+
 ```bash
 git clone git@github.com:Ervin-Capuno/flutter_ui_final_project.git
 ```
-2. In the project directory where you clone it type the specific commands on the terminal/bash/cmd.
-```bash
+or using HTTPS
+```Bash
+https://github.com/Ervin-Capuno/flutter_ui_final_project.git
+```
+
+2. Install Dependencies
+
+Navigate to the project directory after cloning it. In your terminal, run the following command to fetch and install all the required packages:
+
+```Bash
 flutter pub get
 ```
-This command is used to fetch and install all the package dependencies required for the Flutter project. It initializes the project by ensuring all necessary packages are downloaded and ready to use.
-3. Now open the android emulator and type this command.
-```bash
-flutter run
-``` 
-It is used to run the flutter 
+
+This command ensures that all necessary packages listed in the project's pubspec.yaml file are downloaded and ready to use.
+
+3. Check for Running Android Emulator
+
+Before running the Flutter application, make sure you have an Android emulator set up and running. You can use Android Studio's built-in emulator or a third-party emulator like Genymotion. Refer to the official Android developer documentation for detailed instructions on setting up an emulator: https://developer.android.com/about/versions/14/setup-sdk
+
+4. List Available Devices
+
+Use the following command in your terminal to see a list of connected devices and emulators, including their unique device IDs:
+
+```Bash
+flutter devices
+```
+
+This will display a list of available devices, allowing you to identify the correct target for running your Flutter app.
+
+5. Run the Flutter Application
+
+From the list of devices displayed in step 4, note down the ID of the Android emulator you want to use (e.g., emulator-5554). Then, run the following command in your terminal to start the Flutter application on that specific emulator:
+
+```Bash
+flutter run -d emulator-5554
+```
+
+Be sure to replace emulator-5554 with the actual ID of your chosen emulator. This command tells Flutter to run your app on the specified device using hot reload functionality. Any code changes you make will be automatically reflected in the running app, streamlining the development process.
+
+Additional Tips:
+
+If you encounter issues with the emulator setup, double-check your Android Studio (or emulator) configuration and ensure the emulator is properly linked and running.
+For more advanced usage, refer to the official Flutter documentation for in-depth instructions on various development aspects: https://docs.flutter.dev/
 
 ## Conrtibutors
 - [Bien Joshua Macuha]()
