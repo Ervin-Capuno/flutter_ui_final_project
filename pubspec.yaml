@@ -28,12 +28,19 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - img/
+    - img/app_assets/electric_stove.jpg
+    - img/app_assets/Killua.jpg
+    - img/app_assets/kitchen.jpg
+    - img/app_assets/lamp.jpg
+    - img/app_assets/playstore.png
+    - img/app_assets/tv.png
+    - img/app_assets/living_room.jpg
+
 
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "img/playstore.png"
+  image_path: "img/app_assets/playstore.png"
   min_sdk_android: 21
   web:
     generate: true
