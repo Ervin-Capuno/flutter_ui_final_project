@@ -106,7 +106,7 @@ For more advanced usage, refer to the official Flutter documentation for in-dept
 
 
 
-## Conrtibutors
+## Members
 - [Bien Joshua Macuha](https://github.com/bienjoshuaa)
 - [Ervin Rey Capuno](https://github.com/Ervin-Capuno)
 - [Karl Phillip Caringal](https://github.com/caringalkarl)
