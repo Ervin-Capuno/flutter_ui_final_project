@@ -87,7 +87,18 @@ If you encounter issues with the emulator setup, double-check your Android Studi
 For more advanced usage, refer to the official Flutter documentation for in-depth instructions on various development aspects: https://docs.flutter.dev/
 
 ## Sample UI
-![Homepage UI](img/Homepage.png)
+![Skelton UI](img/readme_image/skeleton_loading_ui.png)
+![instruction](img/readme_image/instruction.png)
+![Homepage UI](img/readme_image/Homepage.png)
+![Add Room](img/readme_image/add_room.png)
+![Add Device](img/readme_image/add_device.png)
+![Room Info](img/readme_image/room_info.png)
+![Device State](img/readme_image/device_state.png)
+![Wifi Settings](img/readme_image/wifi_settings.png)
+![Bluetooth Settings](img/readme_image/bluetooth_settings.png)
+![Drawer](img/readme_image/drawer.png)
+
+
 
 ## Conrtibutors
 - [Bien Joshua Macuha](https://github.com/bienjoshuaa)
