@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: EdgeInsets.only(right: 16.0),
             child: CircleAvatar(
-              backgroundImage: AssetImage('img/Killua.jpg'),
+              backgroundImage: AssetImage('img/app_assets/Killua.jpg'),
             ),
           ),
         ],
