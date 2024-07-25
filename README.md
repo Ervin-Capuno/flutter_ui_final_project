@@ -31,10 +31,9 @@ Ensure you have the following installed:
 - skeleton_text: (verion 3.0.1): Used to create a skeleton UI.
 - image_picker: (version 0.8.5+3): Used to pick image from the local device.
 
-Markdown
-## Getting Started with Your Flutter Project
+## Getting Started with the Flutter Project
 
-This guide walks you through setting up and running your downloaded Flutter project.
+This guide walks you through setting up and runnin this downloaded Flutter project.
 
 **1. Download the Project**
 
