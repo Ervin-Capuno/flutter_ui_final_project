@@ -12,8 +12,8 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 - The user can add a new room or add a device to a specific room.
 
 ## YouTube Link: 
-Figma UI demo: https://youtu.be/iyiVLka8Ti8
-Android UI demo: 
+- Figma UI demo: https://youtu.be/iyiVLka8Ti8
+- Android UI demo: 
 
 ## Environement Configurations
 Ensure you have the following installed:
