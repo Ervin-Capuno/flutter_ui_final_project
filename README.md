@@ -87,6 +87,9 @@ Additional Tips:
 If you encounter issues with the emulator setup, double-check your Android Studio (or emulator) configuration and ensure the emulator is properly linked and running.
 For more advanced usage, refer to the official Flutter documentation for in-depth instructions on various development aspects: https://docs.flutter.dev/
 
+## Sample UI
+![Homepage UI](img/Homepage.png)
+
 ## Conrtibutors
 - [Bien Joshua Macuha](https://github.com/bienjoshuaa)
 - [Ervin Rey Capuno](https://github.com/Ervin-Capuno)
