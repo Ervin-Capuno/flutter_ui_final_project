@@ -26,13 +26,16 @@ Ensure you have the following installed:
 ## Third-Party Packages Used
 ##### [To search the packages that used in this project](https://pub.dev/)
 - flutter_arc_speed_dial: (version 2.0.1) used to create the arc speed dial.
+![Arc Speed dial](img/readme_image/arc_speed_dial.png)
 - flutter_launcher_icons (version 0.13.1): Used to change the app icon.
 - rename_app (version 1.6.1): Used to change the app's name.
-- skeleton_text: (verion 3.0.1): Used to create a skeleton UI.
+![App Name and App Icon](img/readme_image/app_icon_and_app_name.png)
+- skeleton_text (version 3.0.1): to create a skeleton loading page.
+![Sekleton UI](img/readme_image/skeleton_ui.png)
 - image_picker: (version 0.8.5+3): Used to pick image from the local device.
+![Image picker](img/readme_image/image_picker.png)
 
 ## Getting Started with the Flutter Project
-
 This guide walks you through setting up and runnin this downloaded Flutter project.
 
 **1. Download the Project**
