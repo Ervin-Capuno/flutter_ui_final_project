@@ -74,11 +74,11 @@ This will display a list of available devices, allowing you to identify the corr
 5. Run the Flutter Application
 
 From the list of devices displayed in step 4, note down the ID of the Android emulator you want to use (e.g., emulator-5554). Then, run the following command in your terminal to start the Flutter application on that specific emulator:
-
+![flutter_doctor](img/readme_image/flutter_devices.png)
 ```Bash
 flutter run -d emulator-5554
 ```
-![flutter_doctor](img/readme_image/flutter_devices.png)
+
 Be sure to replace emulator-5554 with the actual ID of your chosen emulator. This command tells Flutter to run your app on the specified device using hot reload functionality. Any code changes you make will be automatically reflected in the running app, streamlining the development process.
 
 Additional Tips:
