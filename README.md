@@ -12,7 +12,8 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 - The user can add a new room or add a device to a specific room.
 
 ## YouTube Link: 
-https://youtu.be/iyiVLka8Ti8
+Figma UI demo: https://youtu.be/iyiVLka8Ti8
+Android UI demo: 
 
 ## Environement Configurations
 Ensure you have the following installed:
@@ -44,7 +45,7 @@ git clone git@github.com:Ervin-Capuno/flutter_ui_final_project.git
 ```
 or using HTTPS
 ```Bash
-https://github.com/Ervin-Capuno/flutter_ui_final_project.git
+git clone https://github.com/Ervin-Capuno/flutter_ui_final_project.git
 ```
 
 2. Install Dependencies
