@@ -13,6 +13,7 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 - We did not implement the login, register, and logout function.
 
 ## Navigation
+- Note: Long pressing the rooms will show the room informmation and options, one tap on the room card will show the devices in the room.
 ![navigation](https://github.com/user-attachments/assets/f67e0c16-89b4-43d0-822f-a284e8ecc911)
 
 
