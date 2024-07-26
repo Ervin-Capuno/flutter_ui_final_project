@@ -9,7 +9,7 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 - By tapping a room once, the user can see the different devices installed in that room.
 - The user can view the kWh usage and the current state (on or off) of each device by tapping on it, which will bring up a bottom sheet allowing them to turn the device on or off.
 - There is a settings option to connect to the microcontroller via Bluetooth Low Energy (BLE) or WiFi.
-- The user can add a new room or add a device to a specific room.
+- The user can add a new room or add a device to a specific room but it will not totally display the added rooms/device but it will have a snackbar saying that it was added.
 
 ## YouTube Link: 
 - Figma UI demo: https://youtu.be/iyiVLka8Ti8
