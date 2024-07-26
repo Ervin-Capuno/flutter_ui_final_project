@@ -20,7 +20,7 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 
 ## YouTube Link: 
 - Figma UI demo: https://youtu.be/iyiVLka8Ti8
-- Android UI demo: 
+- Android UI demo: https://youtu.be/CvERUp0tJNI
 
 ## Environement Configurations
 Ensure you have the following installed:
