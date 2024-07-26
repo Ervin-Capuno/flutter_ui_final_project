@@ -49,22 +49,22 @@ This command will check your environment and display a report of the status of y
 ## Third-Party Packages Used/Dependencies
 ##### [To search the packages that used in this project](https://pub.dev/)
 - flutter_arc_speed_dial: (version 2.0.1) used to create the arc speed dial. 
-link: https://pub.dev/packages/flutter_arc_speed_dial
+- link: https://pub.dev/packages/flutter_arc_speed_dial
 ![Arc Speed dial](img/readme_image/arc_speed_dial.png)
 
 - flutter_launcher_icons (version 0.13.1): Used to change the app icon.
-link: https://pub.dev/packages/flutter_launcher_icons
+- link: https://pub.dev/packages/flutter_launcher_icons
 - rename_app (version 1.6.1): Used to change the app's name.
-link: https://pub.dev/packages/rename_app
+- link: https://pub.dev/packages/rename_app
 - ![App Name and App Icon](img/readme_image/app_icon_and_app_name.png)
 
 
 - skeleton_text (version 3.0.1): to create a skeleton loading page.
-link: https://pub.dev/packages/skeleton_text
+- link: https://pub.dev/packages/skeleton_text
 ![Sekleton UI](img/readme_image/skeleton_ui.png)
 
 - image_picker: (version 0.8.5+3): Used to pick image from the local device.
-link: https://pub.dev/packages/image_picker
+- link: https://pub.dev/packages/image_picker
 ![Image picker](img/readme_image/image_picker.png)
 
 ## Getting Started with the Flutter Project
