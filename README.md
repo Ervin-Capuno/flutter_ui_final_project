@@ -63,7 +63,7 @@ This command will check your environment and display a report of the status of y
 
 ## Getting Started with the Flutter Project
 This guide walks you through setting up and runnin this downloaded Flutter project.
-
+Note: Ensure you must have a git bash installed in your computer
 **1. Download the Project**
 
 Open your terminal and navigate to the desired directory where you want to clone the project. Then, use the following command to clone the project from GitHub:
