@@ -1,4 +1,4 @@
-![navigation](https://github.com/user-attachments/assets/aa2bf08f-b1b6-4e26-8a10-54d2f319a80c)# CozyControl
+# CozyControl
 
 CozyControl is a sample UI android application created using Flutter and Dart. It allows users to remotely control their home appliances. This project serves as the final project for Application Development.
 
