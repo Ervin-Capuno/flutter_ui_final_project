@@ -1,4 +1,4 @@
-# CozyControl
+![image](https://github.com/user-attachments/assets/63f1d562-bd31-4408-94c5-799e359d19ae)# CozyControl
 
 CozyControl is a sample UI android application created using Flutter and Dart. It allows users to remotely control their home appliances. This project serves as the final project for Application Development. This proposal is aligned with SDG 7 "Affordable and Clean Energy" in terms of being able to ensure proper energy consumption and management of electrical devices/application.
 
@@ -20,7 +20,7 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 
 ## YouTube Link: 
 - Figma UI demo: https://youtu.be/iyiVLka8Ti8
-- Android UI demo: 
+- Android UI demo: https://youtu.be/CvERUp0tJNI
 
 ## Environement Configurations
 Ensure you have the following installed:
