@@ -1,6 +1,6 @@
 # CozyControl
 
-CozyControl is a sample UI android application created using Flutter and Dart. It allows users to remotely control their home appliances. This project serves as the final project for Application Development.
+CozyControl is a sample UI android application created using Flutter and Dart. It allows users to remotely control their home appliances. This project serves as the final project for Application Development. This proposal is aligned with SDG 7 "Affordable and Clean Energy" in terms of being able to ensure proper energy consumption and management of electrical devices/appliances.
 
 Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Angelo Burog
 
@@ -22,13 +22,29 @@ Created by Bien Joshua Macuha, Ervin Rey Capuno, Karl Phillip Caringal, Nico Ang
 - Figma UI demo: https://youtu.be/iyiVLka8Ti8
 - Android UI demo: 
 
-## Environement Configurations
-Ensure you have the following installed:
-- Flutter SDK (version 3.19.6)
-- Android Studio JellyFish or above
-- Visual Studio
-- Medium Phone API 24 or any version of Android Emulator
-- Git
+## Setting Up Your Development Environment
+To get started with developing your Flutter app, you'll need to ensure that your development environment is properly configured. Follow the steps below to connect your Flutter app to the Android Emulator:
+
+Prerequisites
+1. Flutter SDK: Make sure you have the Flutter SDK installed. If not, you can download it from [flutter.dev](https://docs.flutter.dev/get-started/install).
+2. Android Studio: Install Android Studio, which includes the Android Emulator.
+3. Android SDK: Ensure that the Android SDK is installed and properly configured in Android Studio.
+4. AVD (Android Virtual Device): Set up an Android Virtual Device (AVD) in Android Studio.
+Running Flutter Doctor
+Before proceeding, run the following command to check for any missing dependencies or issues:
+```bash
+flutter doctor
+```
+This command will check your environment and display a report of the status of your Flutter installation. It will also provide information on any additional steps required to set up your development environment.
+
+Setting Up the Android Emulator
+1. Open Android Studio.
+2. Navigate to the homepage and click the Virtual Device Manager.
+![AVD Manager](/img/readme_image/avd_manager.png)
+- Note if there is no virtual device click the + icon and then download the virtual device and also you must navigate through the Windows Features and then check the Hyper V platform and then restart the computer
+3. Click on Create Virtual Device and follow the prompts to set up your virtual device.
+4. Once the virtual device is set up, click on the Play button to start the emulator.
+![Emulator start](/img/readme_image/start.png)
 
 ## Third-Party Packages Used
 ##### [To search the packages that used in this project](https://pub.dev/)
