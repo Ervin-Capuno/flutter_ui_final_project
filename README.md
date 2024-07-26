@@ -43,7 +43,7 @@ This command will check your environment and display a report of the status of y
 5. Click on Create Virtual Device and follow the prompts to set up your virtual device.
 6. Once the virtual device is set up, click on the Play button to start the emulator.
 ![Emulator start](/img/readme_image/start.png)
-- Note if there is no virtual device click the + icon and then download the virtual device and also you must navigate through the Windows Features and then check the Hyper V platform and then restart the computer
+- Note if there is no virtual device click the + icon and then download the virtual device and also you must navigate to the Windows Features and then check the Hyper V platform and then restart the computer
 
 
 ## Third-Party Packages Used
